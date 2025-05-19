@@ -2,6 +2,7 @@
 // src/layouts/Layout.astro
 import Header from "../components/Header.astro";
 import Footer from "../components/Footer.astro";
+import "../styles/global.css";
 
 export interface Props {
   title: string;
@@ -26,8 +27,6 @@ const { title, description = "Sanket Jadhao's Modern Dark Portfolio" } =
       href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap"
       rel="stylesheet"
     />
-
-    <link rel="stylesheet" href="/src/styles/global.css" />
   </head>
   <body class="antialiased">
     <Header />
@@ -39,7 +38,6 @@ const { title, description = "Sanket Jadhao's Modern Dark Portfolio" } =
     <Footer />
 
     <script>
-      // Mobile menu toggle functionality
       const mobileMenuButton = document.getElementById("mobile-menu-button");
       const mobileMenu = document.getElementById("mobile-menu");
 
@@ -61,13 +59,11 @@ const { title, description = "Sanket Jadhao's Modern Dark Portfolio" } =
         });
       }
 
-      // Set current year in the footer
       const currentYearElement = document.getElementById("currentYear");
       if (currentYearElement) {
         currentYearElement.textContent = new Date().getFullYear().toString();
       }
 
-      // Enhanced smooth scroll for all anchor links starting with #
       document.querySelectorAll('a[href^="#"]').forEach((anchor) => {
         anchor.addEventListener("click", function (event) {
           const hrefAttribute = anchor.getAttribute("href");
