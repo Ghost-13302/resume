@@ -24,12 +24,15 @@ const projects = [
     ],
   },
   {
-    title: "Minecraft Mod Development",
-    category: "Extracurricular Activity",
+    title: "Agile Taskflow Website",
+    category: "Personal Project",
     year: "",
-    tags: ["Java", "Minecraft Modding"],
-    description:
-      "Developed a small addon for a popular Minecraft mod, enhancing gameplay by adding new features and improving functionality. This project helped refine skills in Java and modding tools.",
+    tags: ["AstroJS", "Tailwind CSS", "Agile Development", "In Progress"],
+    descriptionPoints: [
+      "Designing an agile task-management web app using AstroJS and Tailwind CSS.",
+      "Building a Kanban-style interface with statuses like Not Started, In Progress, Review, Testing, and To Verify.",
+      "Enhancing frontend skills while applying agile principles and user-centered design.",
+    ],
   },
 ];
 ---
@@ -63,11 +66,7 @@ const projects = [
                   <li>{point}</li>
                 ))}
               </ul>
-            ) : (
-              <p class="text-sm text-[var(--gray-300)] mb-3">
-                {project.description}
-              </p>
-            )}
+            ) : null}
           </div>
         ))
       }
