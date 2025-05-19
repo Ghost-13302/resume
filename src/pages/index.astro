@@ -1,97 +1,27 @@
 ---
 // src/pages/index.astro
+import Layout from "../layouts/Layout.astro";
+import Header from "../components/Header.astro"; // Renamed from HeaderDark
+import HeroSection from "../components/HeroSection.astro"; // Renamed
+import AboutSection from "../components/AboutSection.astro"; // Renamed
+import ExperienceSection from "../components/ExperienceSection.astro"; // Renamed
+import ProjectsSection from "../components/ProjectsSection.astro"; // Renamed
+import SkillsSection from "../components/SkillsSection.astro"; // Renamed
+import EducationSection from "../components/EducationSection.astro"; // Renamed
+import ContactSection from "../components/ContactSection.astro"; // Renamed
+import Footer from "../components/Footer.astro"; // Renamed from FooterDark
+
+const pageTitle = "Sanket Jadhao - Modern Portfolio";
+const pageDescription =
+  "Dark themed portfolio of Sanket Jadhao, showcasing skills in software development, blockchain, and machine learning.";
 ---
 
-<html lang="en">
-  <head>
-    <meta charset="utf-8" />
-    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-    <meta name="viewport" content="width=device-width" />
-    <meta
-      name="description"
-      content="Sanket Jadhao | Full-Stack Developer, AI/ML Engineer, Blockchain Enthusiast"
-    />
-    <title>Sanket Jadhao – Home</title>
-  </head>
-  <body class="antialiased">
-    <header class="p-4 flex justify-between items-center">
-      <h2 class="text-xl font-bold"><a href="/">Sanket Jadhao</a></h2>
-      <nav>
-        <ul class="flex space-x-4">
-          <li><a href="/">Home</a></li>
-          <li><a href="/about/">About</a></li>
-          <li><a href="/blog/">Blog</a></li>
-        </ul>
-      </nav>
-    </header>
-
-    <main class="px-6">
-      <!-- Hero -->
-      <section id="hero" class="py-16 text-center">
-        <h1 class="text-5xl font-bold mb-4">
-          Hi, I’m Sanket Jadhao<span class="text-primary">.</span>
-        </h1>
-        <p class="text-xl max-w-2xl mx-auto mb-8">
-          Master’s graduate in Computer Science (GPA 3.83/4.00) from University
-          of Florida, specializing in full-stack development, AI/ML, and
-          blockchain.
-        </p>
-        <a href="#projects" class="btn btn-primary px-6 py-3 text-lg"
-          >See My Work</a
-        >
-      </section>
-
-      <!-- Highlights -->
-      <section id="highlights" class="py-12 bg-gray-50">
-        <div
-          class="max-w-4xl mx-auto grid grid-cols-1 md:grid-cols-3 gap-8 text-center">
-          <div>
-            <h3 class="text-2xl font-semibold mb-2">Full-Stack Dev</h3>
-            <p>Angular, ReactJS, Golang, REST APIs</p>
-          </div>
-          <div>
-            <h3 class="text-2xl font-semibold mb-2">AI &amp; Data</h3>
-            <p>TensorFlow, BERT, GPT-2, NLP Pipelines</p>
-          </div>
-          <div>
-            <h3 class="text-2xl font-semibold mb-2">Blockchain</h3>
-            <p>Solidity, Web3.js, MetaMask Integration</p>
-          </div>
-        </div>
-      </section>
-
-      <!-- Portfolio Preview -->
-      <section id="projects" class="py-12">
-        <h2 class="text-3xl font-bold mb-6 text-center">Featured Projects</h2>
-        <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
-          <div class="card p-4 border rounded-lg">
-            <h4 class="font-semibold mb-2">Research Collaboration Dashboard</h4>
-            <p class="mb-2">
-              Angular + Golang platform for managing research projects and
-              teams.
-            </p>
-            <a href="/projects#research-dashboard" class="underline"
-              >Learn More →</a
-            >
-          </div>
-          <div class="card p-4 border rounded-lg">
-            <h4 class="font-semibold mb-2">EV Range Predictor</h4>
-            <p class="mb-2">
-              Android app using real-time sensor and map data to forecast
-              electric vehicle range.
-            </p>
-            <a href="/projects#ev-range" class="underline">Learn More →</a>
-          </div>
-          <div class="card p-4 border rounded-lg">
-            <h4 class="font-semibold mb-2">Decentralized Marketplace</h4>
-            <p class="mb-2">
-              Solidity &amp; Web3.js integration for peer-to-peer trading via
-              MetaMask.
-            </p>
-            <a href="/projects#marketplace" class="underline">Learn More →</a>
-          </div>
-        </div>
-      </section>
-    </main>
-  </body>
-</html>
+<Layout title={pageTitle} description={pageDescription}>
+  <HeroSection />
+  <AboutSection />
+  <ExperienceSection />
+  <ProjectsSection />
+  <SkillsSection />
+  <EducationSection />
+  <ContactSection />
+</Layout>
